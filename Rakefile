@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+require "date"
 require "rubygems"
 require "rake/extensiontask"
 require "rake/testtask"
@@ -29,14 +30,15 @@ RDoc::Task.new("rdoc") do |rdoc|
   rdoc.main = 'README.rdoc'
   rdoc.rdoc_files.include('doc/*.rdoc',
                           'ext/projrb.c',
-                          'README',
+                          'README.rdoc',
                           'proj4rb.gemspec',
-                          'Changelog',
+                          'ChangeLog',
                           'MIT-LICENSE')
 end
 
 # Test Task
 Rake::TestTask.new do |t|
   t.libs << "test"
+  t.test_files = FileList['test/test*.rb']
   t.verbose = true
 end

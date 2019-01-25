@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name = 'proj4rb'
-  spec.version = '1.0.0'
+  spec.version = '1.0.1'
   spec.summary = 'Ruby bindings for the Proj.4 Carthographic Projection library'
   spec.description = <<-EOF
     Proj4rb is a ruby binding for the Proj.4 Carthographic Projection library, that supports conversions between a very large number of geographic coordinate systems and datumspec.
@@ -15,6 +15,6 @@ Gem::Specification.new do |spec|
   spec.requirements << 'Proj.4 C library'
   spec.require_path = 'lib'
   spec.extensions = ['ext/extconf.rb']
-  spec.files =  "git ls-files".split("\n")
-  spec.test_files =  "git ls-files -- {test,spec,features}/*".split("\n")
+  spec.files = Dir.glob(["{ext,lib}/**/*",'README.rdoc','MIT-LICENSE'])
+  spec.test_files = Dir.glob("{test}/**/*")
 end

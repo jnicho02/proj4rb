@@ -5,3 +5,7 @@
 /ext/mkmf.log
 /lib/1.8/proj4_ruby.so
 /.idea
+/doc
+/ext/proj4_ruby.bundle
+/ext/projrb.o
+/lib/proj4_ruby.bundle
